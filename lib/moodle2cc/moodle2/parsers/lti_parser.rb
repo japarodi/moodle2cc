@@ -45,5 +45,6 @@ module Moodle2CC::Moodle2
         parse_module(activity_dir, lti)
         lti      
       end
+      end
    end
 end
