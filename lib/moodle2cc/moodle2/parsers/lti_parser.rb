@@ -25,9 +25,17 @@ module Moodle2CC::Moodle2
         lti.module_id = lti_xml.at_xpath('/activity/@moduleid').value
         lti.name      = parse_text(lti_xml, '/activity/lti/name')
         lti.url       = parse_text(lti_xml, '/activity/lti/toolurl')
+        lti.grade     = parse_text(lti_xml, '/activity/lti/grade')
+        if(lti.grade != nill && lti.grade != 0) 
+          lti.external_tool_submission = '1'
+        end
       end
-      parse_module(activity_dir, lti)
+      if(lti.external_tool_submission = '1') 
+        parse_module(activity_dir, assignment)
+      else
+        parse_module(activity_dir, lti)
       lti
+      end
     end
 
 

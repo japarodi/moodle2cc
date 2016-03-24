@@ -23,6 +23,7 @@ module Moodle2CC::Moodle2Converter
         end
         canvas_assignment.submission_types << 'online_text_entry' if moodle_assignment.online_text_submission == '1'
         canvas_assignment.submission_types << 'online_upload' if moodle_assignment.file_submission == '1'
+        canvas_assignment.submission_types << 'external_tool' if moodle_assignment.external_tool_submission == '1'
       else
         canvas_assignment.grading_type = 'not_graded'
         canvas_assignment.submission_types << 'not_graded'
