@@ -4,14 +4,8 @@ module Moodle2CC::Moodle2::Models
                   :send_notifications, :send_late_notifications, :due_date, :cut_off_date, :allow_submissions_from_date,
                   :grade, :time_modified, :completion_submit, :require_submission_statement, :team_submission,
                   :require_all_team_members_submit, :team_submission_grouping_id, :blind_marking, :reveal_identities,
-                  :online_text_submission, :file_submission, :external_tool_submission, :max_file_size_submission, :max_files_submission,
+                  :online_text_submission, :file_submission, :external_tool_submission, :external_tool_url, :external_tool_new_tab,
+                  :max_file_size_submission, :max_files_submission, :url,
                   :submission_comments, :feedback_comments, :feedback_files, :offline_grading_worksheet, :visible
   end
-    
-    
-  end
 end
-
-
-//url
-submission_types
